@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="assets/project.css">
+   <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+  <title>Project Details</title>
+</head>
+<body>
+  <div class="project-box">
+  <div class="project-content">
+  <h1 class="project-title" id="title"></h1>
+  <p class="project-desc" id="description"></p>
+  </div>
+  <div class="project-image">
+    <img id="projectImage" src="assets/images/placeholder.jpg" alt="Project image" class="project-img">
+  </div>
+</div>
+  <script>
+  const urlParams = new URLSearchParams(window.location.search);
+  const projectId = urlParams.get('id');
+
+  const projects = {
+   
+    web1: {
+      title: "Digital Signatures Website",
+      description: "Our Digital Signatures website provides a secure and easy way to sign, send, and manage documents online. Compliant with global e-signature laws, it ensures legally binding signatures with encryption, audit trails, and identity verification. Users can sign from any device, track document status in real-time, and integrate with cloud storage for seamless access. Ideal for contracts, HR forms, and legal documents, our platform simplifies digital signing for individuals and businesses alike."
+    },
+    web2: {
+      title: "Personal Portfolio Website",
+      description: "A portfolio website is a personal online space to showcase your work, skills, and achievements. It highlights projects, designs, or case studies in a visually appealing way, helping you stand out to potential clients or employers. Whether you're a developer, designer, writer, or creative professional, a portfolio website makes it easy to share your story, demonstrate your expertise, and build your professional brand."
+    },
+
+    
+    flutter1: {
+      title: "Ticket Booking App",
+      description: "A flutter-based ticket-booking app,it is a user-friendly mobile application that allows users to conveniently search, select, and book tickets for various services such as buses, trains, flights, or events. It provides real-time availability, secure payment options, and digital ticket generation, all within a few taps. With features like seat selection, booking history, notifications, and customer support, the app simplifies the entire booking process, making it faster, more organized, and accessible anytime from a smartphone."
+    },
+    flutter2: {
+      title: "Notes App",
+      description: "This notes app is a simple and intuitive tool designed to help users quickly jot down, organize, and manage their thoughts, ideas, tasks, and reminders. It offers features like text formatting, checklists, voice input, cloud syncing, and categorization with folders or tags. Whether for personal journaling, academic use, or work-related notes, the app provides a clutter-free interface that ensures information is easily accessible and securely stored across devices.."
+    },
+
+   
+    mockup1: {
+      title: "Music Player App Mockup",
+      description: "The music player app mockup screens showcase a sleek and modern interface designed for a seamless audio experience. These screens include a visually engaging home page with featured playlists, a song library with search and filter options, and a now-playing screen featuring album art, playback controls, and a progress bar. Additional screens display user-created playlists, favorites, and settings for customizing themes or sound quality. The mockups emphasize ease of navigation, aesthetic balance, and intuitive interaction, making them ideal for prototyping a high-quality, user-centric music player app."
+    },
+    mockup2: {
+      title: "Notes App UI Mockup",
+      description: "The notes app mockup screens present a clean, minimalistic design focused on usability and organization. The interface includes a home screen displaying a grid or list of notes with titles, timestamps, and color labels for easy identification. There are dedicated screens for creating and editing notes, featuring a simple text editor, checklist options, and formatting tools. Additional mockups include folder or tag views, a search bar for quick access, and settings for customization like dark mode or sync preferences. These mockups offer a clear visual structure, making it easy to prototype a smooth and efficient note-taking experience."
+    },
+    mockup3: {
+      title: "Craigslist Redesign",
+      description: "The Craigslist website redesign mockups feature a modern, visually appealing layout that enhances usability while preserving the platform’s core functionality. The updated interface includes a clean homepage with intuitive navigation, categorized listings with icons, and an improved search bar with filters for location, price, and date. Listing pages are redesigned with better spacing, larger images, and clearer contact buttons, offering a more engaging user experience. Responsive design ensures seamless use across devices, while consistent typography and color schemes provide a fresh yet familiar feel. These mockups aim to make Craigslist more user-friendly, accessible, and visually cohesive"
+    },
+
+   
+    python1: {
+      title: "Chess Game (Python)",
+      description: "A chess game in Python simulates a standard two-player chess match using a graphical or console-based interface. It handles piece movements, turn-based gameplay, and basic rules like check and checkmate, offering an interactive way to play and practice chess through programming."
+    },
+    python2: {
+      title: "8 Queens Game Solver",
+      description: "The 8 Queens game in Python is a puzzle-solving program that places eight queens on a chessboard so that no two queens attack each other. It uses algorithms like backtracking to explore all possible placements, demonstrating logic, recursion, and problem-solving skills."
+    },
+    python3: {
+      title: "AMR Resistance Prediction",
+      description: "Antimicrobial resistance (AMR) prediction uses machine learning models in Python to analyze genomic or clinical data and identify resistance patterns. It helps predict how bacteria respond to antibiotics, supporting early detection and smarter treatment decisions in healthcare."
+    },
+
+   
+    dashboard1: {
+      title: "AMR Resistance Dashboard",
+      description: "The Antimicrobial Resistance (AMR) prediction Power BI dashboard visualizes resistance trends across bacteria, antibiotics, and regions using interactive charts and maps. It enables quick insights into resistance patterns, aiding researchers and healthcare professionals in monitoring and combating AMR effectively."
+    },
+    dashboard2: {
+      title: "AQI & Human Health Dashboard",
+      description: "The Air Quality Index (AQI) and Human Health dashboard displays real-time air pollution levels alongside health impact data. It highlights correlations between poor air quality and respiratory or cardiovascular issues, helping users understand environmental risks and support informed public health decisions."
+    }
+  };
+  const imageMap = {
+  web1: "assets/images/pinterestimages/image10.jpg",
+  web2: "assets/images/pinterestimages/image19.jpg",
+  flutter1: "assets/images/pinterestimages/image9.jpg",
+  flutter2: "assets/images/pinterestimages/image16.jpg",
+  mockup1: "assets/images/pinterestimages/image22.jpeg",
+  mockup2: "assets/images/pinterestimages/image14.jpg",
+  mockup3: "assets/images/pinterestimages/image20.jpg",
+  python1: "assets/images/pinterestimages/image3.jpg",
+  python2: "assets/images/pinterestimages/image23.jpeg",
+  python3: "assets/images/pinterestimages/image24.jpeg",
+  dashboard1: "assets/images/pinterestimages/image7.jpg",
+  dashboard2: "assets/images/pinterestimages/image2.jpg"
+};
+
+    const imageSrc = imageMap[projectId];
+  if (imageSrc) {
+    document.getElementById("projectImage").src = imageSrc;
+  } else {
+    document.getElementById("projectImage").src = "images/placeholder.jpg";
+  }
+
+  const project = projects[projectId];
+  if (project) {
+    document.getElementById("title").innerText = project.title;
+    document.getElementById("description").innerText = project.description;
+  } else {
+    document.getElementById("title").innerText = "Project Not Found";
+    document.getElementById("description").innerText = "We couldn't find the project you're looking for.";
+  }
+</script>
+</body>
+</html>
